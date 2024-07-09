@@ -6,18 +6,21 @@ var projectData = [
     title: "Minimalist Portfolio Web",
     description: "a minimalist portfolio web using HTML, CSS and JavaScript",
     link: "https://zdev2.github.io",
+    img: "./src/img/minimalist-portfolio.png",
   },
   {
     title: "CMD Books",
     description:
       "c++ based cli program that provides various books from a google drive.",
     link: "https://zdev2.github.io/cmdbooks",
+    img: "./src/img/cmd-books.png",
   },
   {
     title: "Biography Web",
     description:
       "it's my teacher biography web, this web is designed by my friend Dendra",
     link: "https://biografi-kelompok2.netlify.app",
+    img: "./src/img/biography-web.png",
   },
 ];
 
@@ -166,7 +169,7 @@ function Projects() {
     for (var i = 0; i < projectData.length; i++) {
       projectsContainer.innerHTML += `
             <div class="project card-projects">
-                <img src="https://picsum.photos/1000/500">
+                <img src=${projectData[i].img}>
                 <div class="text-project">
                   <h3>${projectData[i].title}</h3>
                   <p>${projectData[i].description}</p>
