@@ -133,7 +133,7 @@ function Hero() {
   hero.innerHTML = `
         <h1 class="hero-title">Bagus Perwira</h1>
         <h3 class="hero-jobdesk">Backend & Game Developer</h3>
-        <p class="hero-paragraph">I'm a web developer with a passion for creating engaging and user-friendly websites.</p>
+        <p class="hero-paragraph">I'm a web developer that struggle making a responsive website</p>
     `;
   return hero;
 }
