@@ -22,6 +22,12 @@ var projectData = [
     link: "https://biografi-kelompok2.netlify.app",
     img: "./src/img/biography-web.png",
   },
+  {
+    title: "Blog Post",
+    description: "a blog post that contains some information about my project.",
+    link: "https://zdev2.github.io/blog",
+    img: "./src/img/blog-post.png",
+  },
 ];
 
 var experienceData = [
