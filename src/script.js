@@ -28,6 +28,12 @@ var projectData = [
     link: "https://zdev2.github.io/blog",
     img: "./src/img/blog-post.png",
   },
+  {
+    title: "Retail Shop",
+    description: "some retail shop.",
+    link: "https://github.com/Pande17/toko-retail-golang_v3",
+    img: "./src/img/toko-retail.png",
+  },
 ];
 
 var experienceData = [
