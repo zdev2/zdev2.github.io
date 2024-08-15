@@ -31,7 +31,7 @@ var projectData = [
   {
     title: "Retail Shop",
     description: "some retail shop.",
-    link: "https://github.com/Pande17/toko-retail-golang_v3",
+    link: "https://github.com/Pande17/retail-shop-golang_v3",
     img: "./src/img/toko-retail.png",
   },
 ];
