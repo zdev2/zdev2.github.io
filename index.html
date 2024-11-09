@@ -4,47 +4,281 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bagus Perwira</title>
-    <link rel="shortcut icon" href="./src/img/logo.png" type="image/png" />
-    <link rel="stylesheet" href="./src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #f3f4f6;
+        color: #333;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      header {
+        text-align: center;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        padding: 20px;
+      }
+
+      header:hover {
+        transform: scale(1.02);
+      }
+
+      header h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        margin-bottom: 0.5rem;
+      }
+
+      header h2 {
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+
+      section {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #444;
+        border-left: 4px solid #ff7e5f;
+        padding-left: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+        max-width: 800px;
+        margin-bottom: 20px;
+      }
+
+      .portfolio-item,
+      .experience-item,
+      #contact .container > a {
+        padding: 15px;
+        border-radius: 8px;
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease,
+          background-color 0.2s ease;
+        color: #333;
+        text-decoration: none;
+        overflow: hidden;
+      }
+
+      .portfolio-item:hover,
+      .experience-item:hover,
+      #contact .container > a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        background-color: #ff7e5f;
+        color: white;
+      }
+
+      .portfolio-item h3,
+      .experience-item h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .portfolio-item p,
+      .experience-item p {
+        font-size: 0.95rem;
+        color: #383838;
+        line-height: 1.5;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        gap: 1rem;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 768px) {
+        .grid-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .container a {
+        display: inline-block;
+        margin-top: 15px;
+        font-weight: 600;
+        background-color: #feb47b;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .container a:hover {
+        background-color: #ff7e5f;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .image-container {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      #contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
   <body>
-    <section id="app">
-      <header>
-        <nav>
-          <ul>
-            <li><a href="#home" id="home-link">Home</a></li>
-            <li>|</li>
-            <li><a href="#about" id="about-link">About</a></li>
-            <li>|</li>
-            <li><a href="#projects" id="projects-link">Projects</a></li>
-            <li>|</li>
-            <li><a href="#experience">Experience</a></li>
-            <li>|</li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="custom-web">
-          <label for="font">Font:</label>
-          <select aria-labelledby="font" id="font" onchange="FontHandle()">
-            <option value="ms">monospace</option>
-            <option value="ss">sans-serif</option>
-            <option value="s">serif</option>
-          </select>
-          &emsp;
-          <label for="color">Color:</label>
-          <select aria-labelledby="color" id="color" onchange="ColorHandle()">
-            <option value="grayscale">grayscale</option>
-            <option value="red">red</option>
-            <option value="green">green</option>
-            <option value="yellow">yellow</option>
-            <option value="cyan">cyan</option>
-            <option value="orange">orange</option>
-            <option value="pink">pink</option>
-          </select>
-        </div>
-      </header>
+    <header>
+      <h1>Bagus Perwira</h1>
+      <h2>Web & Game Developer</h2>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I recently learned Golang and JavaScript frameworks like
+        <b><i>Vue, React, and Express.</i></b
+        ><br />
+        My goal is to use my skills to create amazing games for learning
+        JavaScript or other programming languages.
+      </p>
     </section>
-    <footer>&copy; 2024 Bagus Perwira</footer>
-    <script src="./src/script.js"></script>
+
+    <section id="portfolio">
+      <h2>Latest Project</h2>
+      <div class="grid-container">
+        <a
+          href="http://zdev2.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="portfolio-item"
+        >
+          <h3>Minimalist Portfolio Web</h3>
+          <p>A minimalist portfolio web using a single HTML file.</p>
+        </a>
+        <a
+          href="https://github.com/zdev2/shortlink"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="portfolio-item"
+        >
+          <h3>URL Shortener</h3>
+          <p>
+            A link management tool built with Golang, React, and MongoDB for URL
+            shortening and tracking.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Backend Developer Internship</h3>
+        <p>2024 - BTW Edutech</p>
+        <p>
+          Contributed to the development and maintenance of backend applications
+          using Golang and Node.js. Collaborated with the frontend team to
+          ensure seamless integration between server-side and client-side
+          applications.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <a
+          href="http://instagram.com/_bgspw"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram</a
+        >
+        <a
+          href="mailto:mail.bagusperwira@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Email</a
+        >
+      </div>
+
+      <div class="container">
+        <h2>Social Media</h2>
+        <a
+          href="http://www.youtube.com/@bagusbilek"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Youtube</a
+        >
+        <a
+          href="https://www.threads.net/@_bgspw"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Threads</a
+        >
+        <a
+          href="https://www.linkedin.com/in/bagus-perwira"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+        <a
+          href="https://www.tiktok.com/@icantcoding"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Tiktok</a
+        >
+      </div>
+    </section>
   </body>
 </html>
