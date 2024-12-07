@@ -3,6 +3,13 @@ var app = document.getElementById("app");
 var projectData = [
   // 6 elements
   {
+    title: "DND Shortlink",
+    description:
+      "A URL shortener web application built with React for the frontend, Go (Golang) for the backend, and MongoDB as the database.",
+    link: "https://zdev2.github.com/shortlink",
+    img: "./src/img/dnd-shortlink.png",
+  },
+  {
     title: "Minimalist Portfolio Web",
     description: "a minimalist portfolio web using HTML, CSS and JavaScript",
     link: "https://zdev2.github.io",
@@ -38,14 +45,19 @@ var projectData = [
 
 var experienceData = [
   {
+    position: "Junior Backend Engineer",
+    duration: "JUL 2024 - DEC 2024",
+    description: "Got internship in BTW Edutech! <a href=''>Summary Here</a>",
+  },
+  {
     position: "Junior Backend Developer",
     duration: "2024 - present",
-    description: "i got a certificate from a workshop!",
+    description: "I got a certificate from a workshop!",
   },
   {
     position: "Game Developer",
     duration: "2020 - Present",
-    description: "i love to make games, but the files got corrupted",
+    description: "I love to make games, but the files got corrupted",
   },
 ];
 
